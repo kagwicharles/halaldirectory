@@ -389,22 +389,21 @@ const BusinessesList = ({ maxwidth, onSearch }) => {
 
       <div className=''>
         <h1 className='header'>Find Halal Businesses and Restaurants</h1>
-        <div class="card" style={{ width: width }}>
-
-          <form>
+        <div class="searchcard" style={{ width: width }}>
+      
 
             <input className='searchinput' type="text" placeholder="I'm Looking for..." value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)} />
 
-            <select className='searchinput' id='dropdownlocation' value={selectedLocation} onChange={handleSelectChange}>
-              <option value="">Location</option>
+            <select  className='searchinput' value={selectedLocation} onChange={handleSelectChange}>
+              <option value="">Choose Location</option>
               <option value="Korea">Korea</option>
               <option value="Kenya">Kenya</option>
               <option value="UK">UK</option>
             </select>
 
 
-          </form>
+   
         </div>
       </div>
 
@@ -424,7 +423,7 @@ const BusinessesList = ({ maxwidth, onSearch }) => {
                     alt={item.restaurantname}
                   />
                   <br></br>
-                  <a href='' className='title'>{item.restaurantname}</a>
+                  <p href='' className='title'>{item.restaurantname}</p>
                   <p>Contact: {item.contact}</p>
                 </div>
               ))
